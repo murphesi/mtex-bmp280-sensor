@@ -1,0 +1,30 @@
+{
+  "name": "bmp280-sensor",
+  "version": "0.1.0",
+  "description": "A Node.js I2C BMP280 sensor library",
+  "main": "bmp280.js",
+  "author": "Oleg Karpov",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:ptax/bmp280-sensor.git"
+  },
+  "dependencies": {
+    "i2c-bus": "^1.2.1",
+    "sleep": "^5.1.0"
+  },
+  "keywords": [
+    "BMP280",
+    "Pressure",
+    "Barometer",
+    "Temperature",
+    "Sensor",
+    "Adafruit",
+    "Raspberry",
+    "Pi",
+    "Beaglebone"
+  ]
+}
