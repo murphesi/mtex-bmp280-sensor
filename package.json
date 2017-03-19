@@ -1,6 +1,6 @@
 {
   "name": "bmp280-sensor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Node.js I2C BMP280 sensor library",
   "main": "bmp280.js",
   "author": "Oleg Karpov",
@@ -13,8 +13,7 @@
     "url": "git@bitbucket.org:ptax/bmp280-sensor.git"
   },
   "dependencies": {
-    "i2c-bus": "^1.2.1",
-    "sleep": "^5.1.0"
+    "i2c-bus": "^1.2.1"
   },
   "keywords": [
     "BMP280",
