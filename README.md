@@ -1,23 +1,21 @@
 BMP 280 sensor library
 =========
-[<img src="https://cdn-learn.adafruit.com/guides/images/000/001/096/medium800/thumb.jpg" width="150" align="right">](https://learn.adafruit.com/adafruit-bmp280-barometric-pressure-plus-temperature-sensor-breakout/overview)
-
-## Installation
-
-```shell
-  npm install bmp280-sensor --save
-```
 
 A Node.js I2C module for the Bosch BMP280 Barometric Pressure and Temperature Sensor - [datasheet](https://cdn-shop.adafruit.com/datasheets/BST-BMP280-DS001-11.pdf).
 
 This module uses [i2c-bus](https://github.com/fivdi/i2c-bus) which should provide access with Node.js on Linux boards like the Raspberry Pi Zero, 1, 2, or 3, BeagleBone, BeagleBone Black, or Intel Edison.
 
-Note: While the BME280/BMP280 device does report temperature, it is measured by the internal temperature sensor. This temperature value depends on the PCB temperature and sensor element self-heating.
+Note: While the BMP280 device does report temperature, it is measured by the internal temperature sensor. This temperature value depends on the PCB temperature and sensor element self-heating.
 Therefore ambient temperature is typically reported above actual ambient temperature.
 
 This module is largely inspired by skylarstein's [bme280-sensor library](https://github.com/skylarstein/bme280-sensor).
 
 However, the main difference is - this library provides a way to setup the sensor - mode, oversampling, etc.
+
+## Installation
+```shell
+  npm install bmp280-sensor --save
+```
 
 ## Example Code
 
