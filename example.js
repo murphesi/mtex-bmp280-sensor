@@ -1,7 +1,8 @@
 const BMP280 = require('./bmp280.js');
 const options = {
   i2cBusNumber  : 1,    // defaults to 1
-  i2cAddress    : 0x76  // defaults to 0x76
+  i2cAddress    : 0x76, // defaults to 0x76
+  verbose       : true
 };
 const bmp280 = new BMP280(options);
 

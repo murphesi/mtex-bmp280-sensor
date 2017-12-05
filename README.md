@@ -23,7 +23,8 @@ However, the main difference is - this library provides a way to setup the senso
 const BMP280 = require('bmp280-sensor');
 const options = {
   i2cBusNumber  : 1,    // defaults to 1
-  i2cAddress    : 0x76  // defaults to 0x76
+  i2cAddress    : 0x76, // defaults to 0x76
+  verbose       : true
 };
 const bmp280 = new BMP280(options);
 

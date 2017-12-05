@@ -7,6 +7,7 @@ class BMP280 {
     this.i2cBusNumber = (options && options.i2cBusNumber) ? options.i2cBusNumber : 1;
     this.i2cBus = i2c.openSync(this.i2cBusNumber);
     this.i2cAddress = (options && options.i2cAddress) ? options.i2cAddress : this.I2C_ADDRESS_A;
+    this.verbose = (options && options.verbose) ? options.verbose : false;
 
     this.I2C_ADDRESS_A    = 0x76;  // default
     this.I2C_ADDRESS_B    = 0x77;  // BMP180
@@ -50,7 +51,9 @@ class BMP280 {
     if (chipId !== this.CHIP_ID) {
       throw new Error(`Unexpected BMx280 chip ID: 0x${chipId.toString(16)}`);
     } else {
-      console.log(`Found BMx280 chip ID 0x${chipId.toString(16)} on bus i2c-${this.i2cBusNumber}, address 0x${this.i2cAddress.toString(16)}`);
+      if (this.verbose) {
+        console.log(`Found BMx280 chip ID 0x${chipId.toString(16)} on bus i2c-${this.i2cBusNumber}, address 0x${this.i2cAddress.toString(16)}`);
+      }
       return chipId;
     }
   }
@@ -73,7 +76,9 @@ class BMP280 {
       dig_P8: BMP280.int16(buf[21], buf[20]),
       dig_P9: BMP280.int16(buf[23], buf[22]),
     };
-    console.log('BMP280 cal = ' + JSON.stringify(this.cal, null, 2));
+    if (this.verbose) {
+      console.log('BMP280 cal = ' + JSON.stringify(this.cal, null, 2));
+    }
   }
 
   getRawValues() {
