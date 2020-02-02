@@ -4,10 +4,10 @@ class BMP280 {
 
   constructor(options) {
     const i2c = require('i2c-bus');
-    this.i2cBusNumber = (options && options.i2cBusNumber) ? options.i2cBusNumber : 1;
+    this.i2cBusNumber = (options && typeof options.i2cBusNumber !== 'undefined') ? options.i2cBusNumber : 1;
     this.i2cBus = i2c.openSync(this.i2cBusNumber);
-    this.i2cAddress = (options && options.i2cAddress) ? options.i2cAddress : this.I2C_ADDRESS_A;
-    this.verbose = (options && options.verbose) ? options.verbose : false;
+    this.i2cAddress = (options && typeof options.i2cAddress !== 'undefined') ? options.i2cAddress : this.I2C_ADDRESS_A;
+    this.verbose = (options && typeof options.verbose !== 'undefined') ? options.verbose : false;
 
     this.I2C_ADDRESS_A    = 0x76;  // default
     this.I2C_ADDRESS_B    = 0x77;  // BMP180

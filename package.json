@@ -1,6 +1,6 @@
 {
   "name": "mtex-bmp280",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A Node.js I2C BMP280 sensor library",
   "main": "bmp280.js",
   "author": "Oleg Karpov",
