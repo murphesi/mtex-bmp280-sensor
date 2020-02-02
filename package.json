@@ -9,7 +9,7 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.org:ptax/bmp280-sensor.git"
+    "url": "https://murphesi@github.com/murphesi/mtex-bmp280-sensor.git"
   },
   "dependencies": {
     "i2c-bus": "^5.1.0"
